@@ -21,5 +21,14 @@ function genFood() {
 }
 function random(max) {
     return Math.floor(Math.random() * Math.floor(max));
-}    
+}
+function setup(){
+    for (i = 0; i < 50; i++){
+        for (j = 0; j < 50; j++){
+            id(i, j).style.backgroundColor = "white";
+        }
+    }
+}   
+var startPos = id(random(50), random(50)); 
 genTable();
+setup();
