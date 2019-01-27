@@ -1,6 +1,6 @@
 
 function id(i, j) {
-    return document.getElementById("i" + i + "j"j);
+    return document.getElementById("i" + i + "j"+j);
 }
 function genTable() {
     var i, j;
@@ -22,4 +22,4 @@ function genFood() {
 function random(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }    
-
+genTable();
