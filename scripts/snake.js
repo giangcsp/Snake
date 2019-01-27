@@ -1,7 +1,16 @@
 class Snake {
-    constructor(position, length=1) {
+    constructor() {
         //The tail is the beginning of the array, head is at the end of the array
-        this.position = [position]
+        this.position = []
+        this.turnPoints = []
+        
+    }
+
+    initSnake() {
+        let block = {
+            
+        }
+        this.position.push(block)
     }
 
     //Getter
@@ -11,6 +20,10 @@ class Snake {
 
     get length() {
         return this.position.length
+    }
+
+    addTurnpoint(turnPoint) {
+        this.turnPoints.push(turnPoint)
     }
 
     //Setter
@@ -25,19 +38,28 @@ class Snake {
         
     }
 
-    moveSnake(direction) {
-        let i = 0
-        while (i < this.position.length) {
-            let pos = this.position.pop(0)
-            switch (direction) {
-                case 'left':
-                case 'right':
-                case 'up':
-                case 'down':
-            }
-            this.position.push(pos)
-            i += 1
+
+    moveSnake() {
+        for (let i = 0; i<this.position.length; i++) {
+            let block = this.position[i]
+            
         }
+    }
+
+    moveBlock(block, direction) {
+        let i = block.position.i
+        let j = block.position.j
+        switch(direction) {
+            case 'left':
+                i -= 1
+            case 'right':
+                i += 1
+            case 'up':
+                j += 1
+            case 'down':
+                j -= 1
+        }
+        block.position.parsedPosition = "i" + i + "j" + j
     }
 
     /**
